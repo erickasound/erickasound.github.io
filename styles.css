@@ -1,0 +1,223 @@
+/* Colors */
+:root {
+  --bg-dark: #0e1116;
+  --bg-panel: #161b22;
+  --bg-sub: #5c616a;
+  --blue-soft: #5f8cff;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+
+  --font-body: Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-family: var(--font-body);
+  font-size: var(--base-font-size);
+  height: 100%;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  line-height: var(--line-height);
+  
+}
+
+main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+/* Navigation */
+nav {
+  background: var(--bg-panel);
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: var(--blue-soft);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+nav li {
+  position: relative;
+  display: block;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--blue-soft);
+}
+
+/* The dropdown container */
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: var(--bg-panel);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content li a {
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: var(--bg-sub);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Layout */
+main.center {
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+main.content {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+#bannerimage {
+  width: 100%;
+  background-image: url(imgs/mebg.jpg);
+  height: 405px;
+  background-color: purple;
+  background-position: center;
+}
+
+#bannerimage2 {
+  width: 100%;
+  background-image: url(imgs/vmon.jpg);
+  height: 405px;
+  background-color: purple;
+  background-position: center;
+}
+
+#bannerimage3 {
+  width: 100%;
+  background-image: url(imgs/post.jpg);
+  height: 405px;
+  background-color: purple;
+  background-position: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* Typography */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+
+
+.bantext {
+  text-align: center; 
+  position: relative;
+  top: 200px;
+  font-size: 48px;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+}
+
+p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Works */
+.work-item {
+  background: var(--bg-panel);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border-left: 3px solid var(--blue-soft);
+}
+
+/* Safety */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
